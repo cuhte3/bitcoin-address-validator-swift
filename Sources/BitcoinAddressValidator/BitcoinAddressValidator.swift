@@ -1,6 +1,9 @@
-public struct BitcoinAddressValidator {
-    public private(set) var text = "Hello, World!"
+import Foundation
 
-    public init() {
+public struct BitcoinAddressValidator {
+    private let validators: [IAddressValidator] = [Base58Validator(), SegWitValidator()]
+    
+    public func isValid(address: String) -> Bool {
+        validators.first(where: { $0.isValid(address: address )}) != nil
     }
 }
