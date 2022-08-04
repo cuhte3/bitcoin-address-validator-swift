@@ -1,5 +1,5 @@
 import Foundation
 
-public protocol IAddressValidator {
+protocol IAddressValidator {
     func isValid(address: String) -> Bool
 }
