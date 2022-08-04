@@ -4,7 +4,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "bitcoin-address-validator-swift",
+    name: "BitcoinAddressValidator",
     platforms: [
         .iOS(.v13),
         .macOS(.v11)
@@ -12,7 +12,7 @@ let package = Package(
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
-            name: "Bitcoin address validator in Swift",
+            name: "BitcoinAddressValidator",
             targets: ["BitcoinAddressValidator"]),
     ],
     dependencies: [
